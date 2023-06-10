@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <link rel = "stylesheet" href = "style.css" type = "text/css">
+        <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    </head>
+
+    <title>
+        ЛБ 3 Хусаинов Роман
+    </title>
+
+    <body>
+      <nav class="navbar sticky-top">
+        <div class="container">
+
+            <div class="logo-website-name">
+                <div class="logo">B</div>
+                <div class="website-name">Красивые птички</div>
+            </div>   
+        </div>
+    </nav>
+                <li class="col-sm" style="margin-top: auto; margin-bottom: auto;">
+                  <div class="flex_button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="text_button" id="toastbtn">
+                      Загрузить
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+
+          <div class="flex_heading">
+            <h1>
+              Птички
+            </h1>
+          </div>
+          
+        <div id = "root">
+            <script id = "template" type = "text/x-handlebars-template">
+                <div class = "container" style = "width: 1000px;">
+                    <div class = "row gy-5">
+                        {{#each cards}}
+                        <div class = "col-sm">
+                            <div class="card" style="width: 300px; border-radius: 10%;">
+                                <div class = "{{image_class}}"></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{name}}</h5>
+                                    <p class="card-text">{{text}}</p>
+                                    <button type="button" class="btn btn-primary" id = "{{id}}" data-bs-toggle="modal" data-bs-target="#exampleModal" style = "background-color: #8d2fa0;">Изменить</button>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </script>
+        </div>
+        
+        <footer>
+          <div class="container">
+              <div class="about">Роман Хусаинов</div>
+              <div class="links">
+                  <a href=""><img src="img/linkedin-svgrepo-com.svg" alt="linkedIn"></a>
+                  <a href=""><img src="img/facebook-svgrepo-com.svg" alt="facebook"></a>
+                  <a href=""><img src="img/twitter-svgrepo-com.svg" alt="twitter"></a>
+              </div>
+          </div>
+      </footer>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title "></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Название карточки:</p>
+                    <input id = "create_name" type="text" />
+
+                    <p>Текст карточки:</p>
+                    <input id = "create_text" type="text" />
+
+
+                    <p>Цвет карточки:</p>
+                    <select id = "selector">
+
+                        <option>Цвета:</option>
+                        <option value = "#004d99" style = "background: #cdb4db"></option>
+                        <option value = "#0066cc" style = "background: #ffc8dd"></option>
+                        <option value = "#0080ff" style = "background: #ffafcc"></option>
+                        <option value = "#3399ff" style = "background: #bde0fe"></option>
+                        <option value = "#66b3ff" style = "background: #a2d2ff"></option>
+
+                    </select>
+                    <div class = "row" style = "margin: 20px;">
+                        <button type = "button" id = "save" style = "background-color: #9364af; width: 100px; height: 30px; margin-right: 10px;">Сохранить</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <script type = "module" src = "script.js"></script>
+        <script src = "https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <script src = "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+</html>

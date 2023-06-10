@@ -1,0 +1,10 @@
+{
+  "cards": [
+    { "name": "Птичка №1", "text": "Голубь", "image_class": "image_1", "id": "1" },
+    { "name": "Птичка №2", "text": "Воробей", "image_class": "image_2", "id": "2" },
+    { "name": "Птичка №3", "text": "Орел", "image_class": "image_3", "id": "3" },
+    { "name": "Птичка №4", "text": "Павлин", "image_class": "image_4", "id": "4" },
+    { "name": "Птичка №5", "text": "Тукан", "image_class": "image_4", "id": "5" },
+    { "name": "Птичка №6", "text": "Ворона", "image_class": "image_5", "id": "6" }
+  ]
+}
